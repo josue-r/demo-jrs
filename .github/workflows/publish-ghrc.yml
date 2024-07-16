@@ -30,14 +30,6 @@ jobs:
       - name: Build with Maven
         run: mvn -B package
 
-      - run: mv target/coverage-reports/jacoco.exec target/coverage-reports/actions-jacoco.exec
-
-      - name: Upload Jacoco coverage
-        uses: actions/upload-artifact@v3
-        with:
-          name: actions-jacoco.exec
-          path: target/coverage-reports/actions-jacoco.exec
-          
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
