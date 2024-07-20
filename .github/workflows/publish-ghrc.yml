@@ -67,7 +67,7 @@ jobs:
         id: prep
         run: |
           DOCKER_IMAGE=ghcr.io/josue-r/store-gateway
-          TAGS="${DOCKER_IMAGE}:${{ needs.build.outputs.appVersion }}"
+          TAGS="${DOCKER_IMAGE}
           echo "tags=${TAGS}" >> $GITHUB_OUTPUT
 
       - name: Login to GitHub Container Registry
